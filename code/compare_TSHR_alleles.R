@@ -1,13 +1,13 @@
-# Using the illumina genome version version to compare the different alleles
+# Using the illumina genome version to compare the different TSHR alleles
 # Code developed by Mats Pettersson, e-mail: mats.pettersson@imbim.uu.se
 # Uppsala University
-#
 
 #TSHR_gene_model <- read.table("~/Projects/Herring/data/TSHR/TSHR_Ch_v2.blastout", stringsAsFactors=F)
 #TSHR_gene_model <- TSHR_gene_model[TSHR_gene_model[,3] >= 95, ]
 #TSHR_SNPs <- read.table("~/Projects/Herring/data/TSHR/TSHR_SNPs_Ch_v2.blastout", stringsAsFactors=F)
 #TSHR_SNPs <- TSHR_SNPs[TSHR_SNPs[,3] > 98 & TSHR_SNPs[,2] == "Chr17", ]
 
+# Load data
 TSHR_BAC_raw <- read.table("~/Projects/Herring/data/TSHR/BAC_P19L22_PB_and_Ilu_blastout.txt", stringsAsFactors=F)
 TSHR_BAC <- TSHR_BAC_raw[TSHR_BAC_raw[,2] == "scaffold1420" & TSHR_BAC_raw[,3] > 97,]
 
@@ -45,7 +45,7 @@ segments(y0 = TSHR_BAC[,7], y1 = TSHR_BAC[,8], x0 = TSHR_BAC[,9], x1 = TSHR_BAC[
 BAC_target_blocks <- TSHR_BAC[TSHR_BAC[,7] < 7.e4 & TSHR_BAC[,8] > 2.9e4,]
 segments(y0 = BAC_target_blocks[,7], y1 = BAC_target_blocks[,8], x0 = BAC_target_blocks[,9], x1 = BAC_target_blocks[,10], col = c("darkorchid"), lwd  =3)
 
-# Shifting the position vectors, and inverting the bac ones.
+# Shifting the position vectors, and inverting the bac ones
 chr_start_vec <- BAC_target_blocks[,9]
 chr_end_vec <- BAC_target_blocks[,10]
 
