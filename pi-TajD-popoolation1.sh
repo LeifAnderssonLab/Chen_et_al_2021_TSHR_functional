@@ -1,11 +1,11 @@
-# Commands used to calculate pi and Tajima's D from Pool-seq data using PoPoolation 1.2.2
+# Commands to calculate pi and Tajima's D from Pool-seq data using PoPoolation 1.2.2
 # Angela P. Fuentes-Pardo, email: apfuentesp@gmail.com
 # Uppsala University
 # Date: 2021-04-23
 
 #!/bin/bash
 
-# Load libraries (Uppmax)
+# Load libraries (in Uppmax computer cluster)
 module load bioinfo-tools
 module load samtools/1.10
 
