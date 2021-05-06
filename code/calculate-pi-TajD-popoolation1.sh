@@ -41,7 +41,7 @@ perl ${POPOOLATION_v1_PATH}/basic-pipeline/subsample-pileup.pl --min-qual 20 --m
 
 # Calculate nucleotide diversity (pi) and Tajima's D
 echo Calculating pi ...
-perl ${POPOOLATION_v1_PATH}/Variance-sliding.pl --fastq-type sanger --measure pi --input ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.pileup --min-count 2 --min-coverage ${MIN_COV} --max-coverage ${MAX_COV} --min-covered-fraction 0.4 --pool-size ${POOL_SIZE} --window-size ${WINDOW_SIZE} --step-size ${STEP_SIZE} --output ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.pi.txt #--snp-output ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.snps
+perl ${POPOOLATION_v1_PATH}/Variance-sliding.pl --fastq-type sanger --measure pi --input ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.pileup --min-qual 20 --min-count 2 --min-coverage ${MIN_COV} --max-coverage ${MAX_COV} --min-covered-fraction 0.4 --pool-size ${POOL_SIZE} --window-size ${WINDOW_SIZE} --step-size ${STEP_SIZE} --output ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.pi.txt #--snp-output ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.snps
 
 echo Calculating Tajimas D ...
-perl ${POPOOLATION_v1_PATH}/Variance-sliding.pl --fastq-type sanger --measure D --input ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.pileup --min-count 2 --min-coverage ${MIN_COV} --max-coverage ${MAX_COV} --min-covered-fraction 0.4 --pool-size ${POOL_SIZE} --window-size ${WINDOW_SIZE} --step-size ${STEP_SIZE} --output ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.TajD.txt
+perl ${POPOOLATION_v1_PATH}/Variance-sliding.pl --fastq-type sanger --measure D --input ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.pileup --min-qual 20 --min-count 2 --min-coverage ${MIN_COV} --max-coverage ${MAX_COV} --min-covered-fraction 0.4 --pool-size ${POOL_SIZE} --window-size ${WINDOW_SIZE} --step-size ${STEP_SIZE} --output ${SAMPLE_ID}.${CHR}.$SUFFIX.idl.scov.TajD.txt
