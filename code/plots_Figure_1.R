@@ -90,6 +90,7 @@ for(x in files2) {  # loop over files
 }
 
 # Merge the dataframes of each of the stats
+library(tidyverse)
 df1 <- df1_list %>% purrr::reduce(left_join, by = c('contig','bp'))
 df2 <- df2_list %>% purrr::reduce(left_join, by = c('contig','bp'))
 head(df1)
